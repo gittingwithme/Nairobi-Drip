@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection | Nairobi Drip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">NAIROBI<span>DRIP</span>.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="controls">
+            <button class="icon-btn" id="currency-toggle" onclick="toggleCurrency()">KES</button>
+            <button class="icon-btn" id="theme-toggle">🌙</button>
+            <button class="icon-btn">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="hero-title">The Drop</h1>
+        <p style="text-align: center; opacity: 0.7;">Premium Kicks in Nairobi.</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Nike Red">
+                <div class="product-info">
+                    <h3>Nike Air Max Red</h3>
+                    <p class="price" data-kes="15500">KES 15,500</p>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810dbc3?auto=format&fit=crop&w=600&q=80" alt="Air Jordan">
+                <div class="product-info">
+                    <h3>Air Jordan 'Retro'</h3>
+                    <p class="price" data-kes="18000">KES 18,000</p>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80" alt="Puma High">
+                <div class="product-info">
+                    <h3>Puma High Court</h3>
+                    <p class="price" data-kes="9500">KES 9,500</p>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1525966548599-fd96ce77e202?auto=format&fit=crop&w=600&q=80" alt="Vans Classic">
+                <div class="product-info">
+                    <h3>Vans Old Skool</h3>
+                    <p class="price" data-kes="6500">KES 6,500</p>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=600&q=80" alt="Nike Green">
+                <div class="product-info">
+                    <h3>Nike Dunk Low Green</h3>
+                    <p class="price" data-kes="14200">KES 14,200</p>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+             <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1560769625-7158edd23295?auto=format&fit=crop&w=600&q=80" alt="Wilson Grey">
+                <div class="product-info">
+                    <h3>Urban Runner Grey</h3>
+                    <p class="price" data-kes="8000">KES 8,000</p>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Nairobi Drip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">NAIROBI<span>DRIP</span>.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="controls">
+            <button class="icon-btn" id="theme-toggle">🌙</button>
+            <button class="icon-btn">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 90vh; text-align: center; padding: 20px;">
+        <h1 id="greeting" style="font-size: 3rem; margin-bottom: 10px;">Welcome</h1>
+        <p id="date-display" style="opacity: 0.6; margin-bottom: 40px;"></p>
+        
+        <div style="max-width: 600px;">
+            <h2>Defined by the Streets of Nairobi.</h2>
+            <p style="font-size: 1.2rem; line-height: 1.6;">
+                We bring you the latest global drops with local flavor. 
+                Original, Authentic, and Bold.
+            </p>
+            <br>
+            <a href="products.html">
+                <button class="add-btn" style="width: 200px; font-size: 1.1rem;">Shop The Collection</button>
+            </a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

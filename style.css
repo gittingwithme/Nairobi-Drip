@@ -1,0 +1,163 @@
+/* --- VARIABLES & THEME CONFIG --- */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #1a1a1a;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+    --accent: #FF4500; /* Nairobi Sunset Orange */
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark-mode {
+    --bg-color: #0f172a; /* Slate 900 */
+    --text-color: #e2e8f0;
+    --glass-bg: rgba(30, 41, 59, 0.7); /* Dark Glass */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: background-color 0.5s ease;
+    padding-top: 80px; /* Space for fixed header */
+}
+
+/* --- GLASS MORPHISM HEADER --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.logo span { color: var(--accent); }
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 15px;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+}
+
+nav a:hover { color: var(--accent); }
+
+/* --- CONTROLS --- */
+.controls { display: flex; gap: 15px; align-items: center; }
+
+button.icon-btn {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+button.icon-btn:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* --- PRODUCT GRID (The Collection) --- */
+.hero-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+}
+
+.product-card {
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.product-info h3 { margin: 10px 0 5px; font-size: 1.1rem; }
+.product-info p { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+
+.add-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: var(--transition);
+}
+
+.add-btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+/* --- CONTACT FORM --- */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--glass-bg);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: transparent;
+    color: var(--text-color);
+}
+
+/* Error Message styling */
+.error-msg { color: #e74c3c; font-size: 0.85rem; display: none; margin-top: 5px; }

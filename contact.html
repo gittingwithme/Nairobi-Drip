@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Nairobi Drip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">NAIROBI<span>DRIP</span>.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="controls">
+            <button class="icon-btn" id="theme-toggle">🌙</button>
+            <button class="icon-btn">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Get in Touch</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="name" required placeholder="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="john@example.com">
+                    <div id="email-error" class="error-msg"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="message" rows="5" required placeholder="How can we help?"></textarea>
+                </div>
+                
+                <button type="submit" class="add-btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
